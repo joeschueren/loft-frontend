@@ -1,0 +1,15 @@
+.delete{
+    box-shadow: 0px;
+    padding: 7px 10px;
+    border: 0px;
+    margin-bottom: 0px;
+    margin-top: 25px;
+    color: white;
+    max-width: 125px;
+    background-color: #ed4040;
+}
+
+.delete:hover{
+    opacity: 50%;
+    cursor: pointer;
+}

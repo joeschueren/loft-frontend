@@ -1,0 +1,18 @@
+.body{
+    white-space: pre-wrap;
+    width: 50%;
+}
+
+.post-container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 45vw;
+    margin: 25px auto;
+    padding: 50px;
+}
+
+.post-anchor{
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,14 @@
+.view-container{
+    width: 60vw;
+    margin: auto;
+    padding: 50px;
+}
+
+.view-title{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.date{
+    margin-bottom: 50px;
+}
