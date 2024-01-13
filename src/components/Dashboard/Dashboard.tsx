@@ -3,9 +3,13 @@ import { useState, useEffect } from "react";
 
 const Dashboard: React.FC = () => {
 
+    const url = (process.env.NODE_ENV === "production" ?
+        "https://equal-pinto-brochure.glitch.me" :
+        "http://localhost:5000");
+
     async function checkAuth(){
       try{
-          const res = await fetch("http://localhost:5000/check-auth", {
+          const res = await fetch(url+"/check-auth", {
               method: "GET",
               credentials: "include"
           })

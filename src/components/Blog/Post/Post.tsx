@@ -1,5 +1,4 @@
 import "./post.css";
-import parse from 'html-react-parser';
 import 'react-quill/dist/quill.snow.css';
 
 interface postProps {

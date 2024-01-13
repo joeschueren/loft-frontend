@@ -12,10 +12,14 @@ const Blog: React.FC = () => {
     
     const [posts, setPosts]: [Post[], any] = useState([]);
 
+    const url = (process.env.NODE_ENV === "production" ?
+        "https://equal-pinto-brochure.glitch.me" :
+        "http://localhost:5000");
+
     useEffect(() => {
         async function getPosts(){
             try{
-                const res = await fetch("http://localhost:5000/get-posts");
+                const res = await fetch(url+"/get-posts");
 
                 const posts = await res.json();
 

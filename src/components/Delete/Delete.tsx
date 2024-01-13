@@ -3,9 +3,13 @@ import { useEffect, useState } from "react";
 
 const Delete: React.FC = () => {
 
+    const url = (process.env.NODE_ENV === "production" ?
+        "https://equal-pinto-brochure.glitch.me" :
+        "http://localhost:5000");
+
     async function checkAuth(){
         try{
-            const res = await fetch("http://localhost:5000/check-auth", {
+            const res = await fetch(url+"/check-auth", {
                 method: "GET",
                 credentials: "include"
             })
@@ -34,7 +38,7 @@ const Delete: React.FC = () => {
     useEffect(() => {
         async function getPosts(){
             try{
-                const res = await fetch("http://localhost:5000/get-posts");
+                const res = await fetch(url+"/get-posts");
 
                 const posts = await res.json();
 
@@ -55,7 +59,7 @@ const Delete: React.FC = () => {
         console.log(title);
 
         try{
-            const res = await fetch("http://localhost:5000/delete", {
+            const res = await fetch(url+"/delete", {
                 method: "POST",
                 credentials: "include",
                 headers: {

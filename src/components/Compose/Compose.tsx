@@ -8,10 +8,14 @@ const Compose:React.FC = () => {
 
     const [text, setText] = useState("");
 
+    const url = (process.env.NODE_ENV === "production" ?
+        "https://equal-pinto-brochure.glitch.me" :
+        "http://localhost:5000");
+
     useEffect(() => {
         async function checkAuth(){
             try{
-                const res = await fetch("http://localhost:5000/check-auth", {
+                const res = await fetch(url+"/check-auth", {
                     method: "GET",
                     credentials: "include",
                 })
@@ -40,7 +44,7 @@ const Compose:React.FC = () => {
 
         if(title.length && text.length){
             try{
-                let res = await fetch("http://localhost:5000/add-post",{
+                let res = await fetch(url+"/add-post",{
                     method: "POST",
                     headers: {
                         "Content-type": "application/json"

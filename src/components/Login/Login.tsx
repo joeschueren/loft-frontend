@@ -1,9 +1,13 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import "./login.css";
 
 const Login: React.FC = () => {
 
     const [message, setMessage] = useState("\u00A0");
+
+    const url = (process.env.NODE_ENV === "production" ?
+        "https://equal-pinto-brochure.glitch.me" :
+        "http://localhost:5000");
 
     async function handleSubmit(e: any){
 
@@ -13,7 +17,7 @@ const Login: React.FC = () => {
         const password = e.target.password.value;
 
         try{
-            const res = await fetch("http://localhost:5000/login", {
+            const res = await fetch(url+"/login", {
                 method: "POST",
                 credentials: "include",
                 headers: {

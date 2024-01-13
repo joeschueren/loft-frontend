@@ -11,7 +11,9 @@ const ViewPost: React.FC = () => {
         title.replace(/\?/g, '%3F');
     }
 
-    console.log(title);
+    const url = (process.env.REACT_APP_ENV === "production" ?
+        process.env.REACT_APP_PROD :
+        process.env.REACT_APP_DEV);
 
     interface Post {
         title: String,
@@ -24,7 +26,7 @@ const ViewPost: React.FC = () => {
     useEffect(() => {
         async function getPosts(){
             try{
-                const res = await fetch("http://localhost:5000/get-post/"+encodeURIComponent(title));
+                const res = await fetch(url+"/get-post/"+encodeURIComponent(title));
 
                 const newPost = await res.json();
 

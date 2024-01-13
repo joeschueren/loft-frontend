@@ -7,9 +7,14 @@ const UpdateEditor: React.FC = () => {
 
     const [text, setText] = useState("");
 
+    const url = (process.env.REACT_APP_NODE_ENV === "production" ?
+        process.env.REACT_APP_PROD :
+        process.env.REACT_APP_DEV);
+
+
     async function checkAuth(){
         try{
-            const res = await fetch("http://localhost:5000/check-auth", {
+            const res = await fetch(url+"/check-auth", {
                 method: "GET",
                 credentials: "include"
             })
@@ -45,7 +50,7 @@ const UpdateEditor: React.FC = () => {
     useEffect(() => {
         async function getPosts(){
             try{
-                const res = await fetch("http://localhost:5000/get-post/"+encodeURIComponent(title));
+                const res = await fetch(url+"/get-post/"+encodeURIComponent(title));
 
                 const newPost: any = await res.json();
 
@@ -72,7 +77,7 @@ const UpdateEditor: React.FC = () => {
 
     async function handlePost(){
         try{
-            const res = await fetch("http://localhost:5000/update", {
+            const res = await fetch(url+"/update", {
                 method: "POST",
                 credentials: "include",
                 headers: {
