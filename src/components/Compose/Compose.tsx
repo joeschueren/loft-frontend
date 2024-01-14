@@ -12,25 +12,6 @@ const Compose:React.FC = () => {
         "https://equal-pinto-brochure.glitch.me" :
         "http://localhost:5000");
 
-    useEffect(() => {
-        async function checkAuth(){
-            try{
-                const res = await fetch(url+"/check-auth", {
-                    method: "GET",
-                    credentials: "include",
-                })
-
-                if(res.status !== 200){
-                    window.location.href="/Login";
-                }
-            } catch (error) {
-                window.location.href="/Login";
-            }
-        }
-
-        checkAuth();
-    }, []);
-
     function handleChange(value: any){
         setText(value);
     }

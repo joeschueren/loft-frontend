@@ -11,9 +11,9 @@ const ViewPost: React.FC = () => {
         title.replace(/\?/g, '%3F');
     }
 
-    const url = (process.env.REACT_APP_ENV === "production" ?
-        process.env.REACT_APP_PROD :
-        process.env.REACT_APP_DEV);
+    const url = (process.env.NODE_ENV === "production" ?
+        "https://equal-pinto-brochure.glitch.me" :
+        "http://localhost:5000");
 
     interface Post {
         title: String,

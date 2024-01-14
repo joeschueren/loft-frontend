@@ -7,9 +7,9 @@ const UpdateEditor: React.FC = () => {
 
     const [text, setText] = useState("");
 
-    const url = (process.env.REACT_APP_NODE_ENV === "production" ?
-        process.env.REACT_APP_PROD :
-        process.env.REACT_APP_DEV);
+    const url = (process.env.NODE_ENV === "production" ?
+        "https://equal-pinto-brochure.glitch.me" :
+        "http://localhost:5000");
 
 
     async function checkAuth(){

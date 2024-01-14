@@ -7,26 +7,6 @@ const Dashboard: React.FC = () => {
         "https://equal-pinto-brochure.glitch.me" :
         "http://localhost:5000");
 
-    async function checkAuth(){
-      try{
-          const res = await fetch(url+"/check-auth", {
-              method: "GET",
-              credentials: "include"
-          })
-
-          if(res.status !== 200){
-              window.location.href = "/Login"
-          }
-
-      } catch(error) {
-
-      }
-    }
-
-    useEffect(() => {
-        checkAuth();
-    }, [])
-
     return(<div className="page">
         <div className="dashboard-container">
             <div className="create">
