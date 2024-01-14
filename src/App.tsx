@@ -6,9 +6,9 @@ import ViewPost from "./components/ViewPost/ViewPost";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Delete from "./components/Delete/Delete";
 import Update from "./components/Update/Update";
-import UpdateEditor from "./components/Update/UpdateEditor/UpdateEditor";
 import { useState, useEffect } from "react";
 import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
+import UpdateEditor from "./components/Update/UpdateEditor/UpdateEditor";
 
 function App() {
 
@@ -41,7 +41,7 @@ function App() {
   
       useEffect(() => {
           checkAuth();
-      }, [])
+      })
     
     if((location !== "/" && location !== "/Blog" && location !== "/Login") && isAuth === undefined){
         return(<h1>Loading</h1>);
@@ -56,7 +56,7 @@ function App() {
                 <Route path="/Dashboard" Component={() => isAuth ? <Dashboard/> : <Navigate to="/login"/>}/>
                 <Route path="/Delete" Component={() => isAuth ? <Delete/> : <Navigate to="/login"/>}/>
                 <Route path="/Update" Component={() => isAuth ? <Update/> : <Navigate to="/login"/>}/>
-                <Route path="/Update/:title" Component={() => isAuth ? <Update/> : <Navigate to="/login"/>}/>
+                <Route path="/Update/:title" Component={() => isAuth ? <UpdateEditor/> : <Navigate to="/login"/>}/>
                 <Route path="/Post/:title" Component={ViewPost}/>
             </Routes>
         </Router>

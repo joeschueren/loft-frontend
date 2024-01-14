@@ -1,13 +1,13 @@
-import { useState, useEffect, Dispatch } from "react";
+import { useState, useEffect } from "react";
 import Post from "./Post/Post";
 import "./blog.css";
 
 const Blog: React.FC = () => {
 
     interface Post {
-        title: String,
+        title: string,
         text: string,
-        date: String,
+        date: string,
     }
     
     const [posts, setPosts]: [Post[], any] = useState([]);
@@ -31,10 +31,25 @@ const Blog: React.FC = () => {
         }
 
         getPosts();
-    }, []);
+    });
 
 
     if(posts.length > 0){
+
+    
+
+        posts.sort((a: Post, b: Post) => {
+            const dateA = new Date(a.date);
+            const dateB = new Date(b.date);
+          
+            if (dateA > dateB) {
+              return -1;
+            } else if (dateA < dateB) {
+              return 1;
+            } else {
+              return 0;
+            }
+          });
 
         const postComponents = [];
 

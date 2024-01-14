@@ -11,27 +11,6 @@ const UpdateEditor: React.FC = () => {
         "https://equal-pinto-brochure.glitch.me" :
         "http://localhost:5000");
 
-
-    async function checkAuth(){
-        try{
-            const res = await fetch(url+"/check-auth", {
-                method: "GET",
-                credentials: "include"
-            })
-  
-            if(res.status !== 200){
-                window.location.href = "/Login"
-            }
-  
-        } catch(error) {
-            alert("Server Error Please Try Again");
-        }
-      }
-  
-      useEffect(() => {
-          checkAuth();
-      }, [])
-
     let { title }: any = useParams();
 
     if(title){
@@ -65,7 +44,7 @@ const UpdateEditor: React.FC = () => {
         }
 
         getPosts();
-    }, [title]);
+    });
 
     const Font = ReactQuill.Quill.import('formats/font');
     Font.whitelist = ['Helvetica', 'Verdana', "Lora", "Roboto", "Montserrat", "Barlow"] ;
@@ -120,7 +99,7 @@ const UpdateEditor: React.FC = () => {
                   ],
             }}
         />
-        <button type="submit" className="submit-button">Submit Updates</button>
+        <button type="submit" className="submit-button">Submit</button>
     </form>
 </div>);
 }
