@@ -1,9 +1,9 @@
 import "./home.css";
+import Navbar from "./Navbar/Navbar";
 
 const Home: React.FC = () => {
     return(<div className="home-container">
-        <a href="/Blog">Blog</a>
-        <a href="/Dashboard">Dashboard</a>
+        <Navbar/>
     </div>)
 }
 
