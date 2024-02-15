@@ -16,7 +16,7 @@ function App() {
 
     const url = (process.env.NODE_ENV === "production" ?
         "https://equal-pinto-brochure.glitch.me" :
-        "http://localhost:5000");
+        "http://192.168.0.238:5000");
 
     const location = window.location.pathname;
 
@@ -37,13 +37,14 @@ function App() {
         } catch(error) {
             alert("Server Error Please Try Again");
         }
-      }
-  
-      useEffect(() => {
-          checkAuth();
-      })
+    }
+
+    useEffect(()=>{
+
+    }, [isAuth]);
     
     if((location !== "/" && location !== "/Blog" && location !== "/Login") && isAuth === undefined){
+        checkAuth();
         return(<h1>Loading</h1>);
     }
     return (

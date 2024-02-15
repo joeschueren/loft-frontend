@@ -1,0 +1,43 @@
+.landing{
+    height: 100vh;
+    background-image: url("../../../public/loft-template.png");
+    background-size: cover;
+    opacity: 80%;
+}
+
+.cta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.cta-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: var(--main-rgb-overlay);
+    font-family: "Barlow";
+    font-weight: 100;
+}
+
+.cta-anchor{
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+    text-shadow: none;
+    padding: 7px 12px;
+    background-color: #f75128;
+}
+
+.cta-title{
+    font-size: 2.5rem;
+    color: white;
+}
+
+.cta-body{
+    font-size: 1.75rem;
+    color: white;
+}
