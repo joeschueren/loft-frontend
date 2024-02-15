@@ -41,3 +41,9 @@
     font-size: 1.75rem;
     color: white;
 }
+
+@media(max-width: 1024px){
+    .landing{
+        background-size: cover contain;
+    }
+}

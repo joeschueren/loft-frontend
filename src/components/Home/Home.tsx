@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import "./home.css";
 import Navbar from "./Navbar/Navbar";
 
 const Home: React.FC = () => {
+
+    useEffect(()=>{
+        document.title = "Connie's Loft | Mentor, OH"
+    })
     return(<div className="home-container">
         <div className="landing">
             <Navbar/>
