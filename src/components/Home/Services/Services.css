@@ -1,7 +1,75 @@
 @import url("../../../globals.css");
 
 .services-title{
+    margin: 50px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.services-img{
+    width: 60%;
+}
+
+.services-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+.services-box-img, .services-box{
+    flex-basis: 50%;
+}
+
+.services-box-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.section-item{
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.section-title{
+    font-size: 1.75rem;
+}
+
+.item-name, .item-desc{
+    margin-bottom: 15px;
+}
+
+.item-name{
+    font-weight: 600;
+    max-width: 60%;
+}
+
+@media(max-width: 1024px){
+
+    .services-row{
+        text-align: center;
+    }
+    .services-box-img, .services-box{
+        margin: 25px 0px;
+        flex-basis: 100%;
+    }
+
+    .section-item{
+        flex-basis: 100%;
+    }
+
+    .services-img{
+        width: 85%;
+    }
 }

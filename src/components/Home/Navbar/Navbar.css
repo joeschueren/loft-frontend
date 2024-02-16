@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    max-height: 125px;
     max-width: 100%;
 }
 
