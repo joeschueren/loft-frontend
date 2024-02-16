@@ -2,13 +2,14 @@
 
 .navbar{
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 0px 10%;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
 }
 
 .mobile-div{
     display: flex;
+    width: 20%;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -19,6 +20,13 @@
 
 .nav-item, .nav-title{
     padding: 25px;
+}
+
+.link-div{
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .nav-item{
@@ -50,33 +58,51 @@
 }
 
 @media(max-width: 1250px){
-    .navbar{
-        padding: 0px 2.5%;
+    .mobile-div{
+        width: 22.5%;
+    }
+
+    .link-div{
+        width: 62.5%;
     }
 }
 
 @media(max-width: 1024px){
     .mobile{
-        display: block;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
+    .mobile-div{
+        width: 100%;
+    }
     
     .navbar{
+        display: flex;
         flex-direction: column;
-        z-index: 1;
+        margin: 0px;
     }
 
     .nav-item{
-        display: none;
-        background: var(--main-rgb-overlay);
+        display: block;
+        margin-left: 25px;
     }
 
-    .toggled{
-        display: block;
-        margin: 20px;
-        padding-left: 5%;
+    .link-div{
+        display: flex;
+        position: absolute;
+        top: 125px;
+        left: 2.5%;
+        width: 95%;
+        margin: 0px;
+        padding: 25px 0px;
+        flex-direction: column;
+        background: white;
+    }
+
+    .hidden{
+        display: none;
     }
 
     .fa-solid, .fa-brands{
