@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import "./home.css";
 import Navbar from "./Navbar/Navbar";
 import Services from "./Services/Services";
+import Location from "./Location/Location";
 
 const Home: React.FC = () => {
 
@@ -21,6 +22,7 @@ const Home: React.FC = () => {
             </div>
         </div>
         <Services/>
+        <Location/>
     </div>)
 }
 

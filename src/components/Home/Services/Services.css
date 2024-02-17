@@ -55,6 +55,15 @@
     max-width: 60%;
 }
 
+.view-more{
+    color: var(--cta-color);
+    text-decoration: none;
+}
+
+.services-anchor{
+    margin-top: 50px;
+}
+
 @media(max-width: 1024px){
 
     .services-row{
@@ -67,6 +76,10 @@
 
     .section-item{
         flex-basis: 100%;
+    }
+
+    .item-name{
+        max-width: 100%;
     }
 
     .services-img{

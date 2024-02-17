@@ -1,6 +1,11 @@
 :root{
     --main-color: #f5eacb;
-    --main-rgb-overlay: rgba(0, 0, 0, 0.4)
+    --main-rgb-overlay: rgba(0, 0, 0, 0.4);
+    --cta-color: #f75128;
+}
+
+a:hover{
+    opacity: 50%;
 }
 
 body{
