@@ -3,6 +3,7 @@ import "./home.css";
 import Navbar from "./Navbar/Navbar";
 import Services from "./Services/Services";
 import Location from "./Location/Location";
+import Footer from "./Footer/Footer";
 
 const Home: React.FC = () => {
 
@@ -23,6 +24,10 @@ const Home: React.FC = () => {
         </div>
         <Services/>
         <Location/>
+        <Footer/>
+        <div className="copyright-container">
+            <span className="copyright">&copy; Connie's Loft 2024</span>
+        </div>
     </div>)
 }
 

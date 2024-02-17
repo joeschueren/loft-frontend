@@ -15,14 +15,14 @@ const Location: React.FC = () => {
                     <span className="location-address">
                         9354 Mentor Avenue<br/>
                         Mentor, OH 44060, US <br/>
-                        Floor 2 | Loft 25 <br/>
-                        440-525-3238 <br/>
+                        Floor 2 | Loft 25 <br/><br/>
+                        440-525-3238 <br/><br/>
                         conniek319@gmail.com
                     </span>
                     <span className="location-hours">
-                        Tuesday 11am - 7pm<br/>
-                        Thursday 11am - 8pm<br/>
-                        Friday 12pm - 6pm<br/>
+                        Tuesday 11am - 7pm<br/><br/>
+                        Thursday 11am - 8pm<br/><br/>
+                        Friday 12pm - 6pm<br/><br/>
                         Saturday 8am - 1pm<br/>
                     </span>
                 </div>
