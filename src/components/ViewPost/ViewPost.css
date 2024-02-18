@@ -1,14 +1,33 @@
 .view-container{
-    width: 60vw;
+    width: 60%;
     margin: auto;
     padding: 50px;
+    margin: 50px auto;
+    background-color: var(--blog-primary);
 }
 
 .view-title{
+    color: var(--blog-secondary);
     font-size: 2rem;
     font-weight: 500;
 }
 
 .date{
     margin-bottom: 50px;
+}
+
+.read-more{
+    width: fit-content;
+    margin: 25px auto;
+    background-color: var(--blog-tertiary);
+    padding: 7px 12px;
+    color: white;
+    text-decoration: none;
+}
+
+@media(max-width: 1024px){
+    .view-container{
+        width: 100%;
+        margin: 0px;
+    }
 }

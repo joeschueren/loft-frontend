@@ -6,10 +6,10 @@
 .post-container{
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
     width: 45vw;
     margin: 25px auto;
     padding: 50px;
+    background-color: var(--blog-primary);
 }
 
 .post-anchor{
@@ -17,8 +17,21 @@
     color: black;
 }
 
+.title{
+    color: var(--blog-secondary);
+    font-weight: 600;
+}
+
+.date{
+    color: var(--blog-tertiary);
+}
+
 @media(max-width: 767px){
     .preview{
         display: none;
+    }
+
+    .post-container{
+        padding-bottom: 25px;
     }
 }

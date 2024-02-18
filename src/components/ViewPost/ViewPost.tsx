@@ -38,7 +38,7 @@ const ViewPost: React.FC = () => {
         }
 
         getPosts();
-    },[title]);
+    },[title, url]);
 
     if(post.title === ""){
         return(<h1>Loading</h1>)
@@ -48,6 +48,7 @@ const ViewPost: React.FC = () => {
             <p className="view-title">{post.title}</p>
             <p className="date">{post.date}</p>
             <p className="text">{parse(post.text)}</p>
+            <a className="read-more" href="/blog">Read More</a>
         </div>)
 }
 

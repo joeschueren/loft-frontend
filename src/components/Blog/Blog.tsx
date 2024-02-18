@@ -60,8 +60,17 @@ const Blog: React.FC = () => {
         
 
         return(<div className="blog-container">
+            <div className="blog-landing">
+                <div className="blog-landing-text">
+                    <span className="blog-title">Messy With a Purpose</span>
+                    <span className="blog-by">a blog by</span>
+                    <span className="blog-name">Connie Kovach</span>
+                </div>
+                <div className="blog-landing-img">
+                    <img className="blog-logo" src="blog-logo.jpg" alt="Messy With a Purpose"></img>
+                </div>
+            </div>
             <div className="blog-row">
-                <span className="blog-title">Messy With a Purpose</span>
                 {postComponents}
             </div>
         </div>)
