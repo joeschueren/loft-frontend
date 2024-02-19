@@ -1,3 +1,9 @@
+.view-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .view-container{
     width: 60%;
     margin: auto;
@@ -29,5 +35,6 @@
     .view-container{
         width: 100%;
         margin: 0px;
+        padding: 10%;
     }
 }

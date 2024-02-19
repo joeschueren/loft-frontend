@@ -44,11 +44,13 @@ const ViewPost: React.FC = () => {
         return(<h1>Loading</h1>)
     }
     else return(
-        <div className="view-container">
-            <p className="view-title">{post.title}</p>
-            <p className="date">{post.date}</p>
-            <p className="text">{parse(post.text)}</p>
-            <a className="read-more" href="/blog">Read More</a>
+        <div className="view-div">
+            <div className="view-container">
+                <p className="view-title">{post.title}</p>
+                <p className="date">{post.date}</p>
+                <div className="text">{parse(post.text)}</div>
+                <a className="read-more" href="/blog">Read More</a>
+            </div>
         </div>)
 }
 

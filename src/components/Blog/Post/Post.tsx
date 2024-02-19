@@ -22,7 +22,7 @@ const Post: React.FC<postProps> = (props) => {
     }
 
     return(
-    <a className="post-anchor" href={"Post/"+encodeURIComponent(props.title)}>
+    <a className="post-anchor" href={"post/"+encodeURIComponent(props.title)}>
         <div className="post-container">
             <p className="title">{props.title}</p>
             <p className="preview">{preview}</p>

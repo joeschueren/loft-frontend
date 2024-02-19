@@ -14,3 +14,9 @@ a:hover{
 body{
     font-family: "Lato";
 }
+
+.loading-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

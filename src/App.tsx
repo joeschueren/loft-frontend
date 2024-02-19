@@ -43,9 +43,9 @@ function App() {
 
     }, [isAuth]);
     
-    if((location !== "/" && location !== "/Blog" && location !== "/Login") && isAuth === undefined){
+    if((location !== "/" && location !== "/blog" && location !== "/login" && !location.includes("/post")) && isAuth === undefined){
         checkAuth();
-        return(<h1>Loading</h1>);
+        return(<div className="loading-container"><h1 className="loading">Loading...</h1></div>);
     }
     return (
         <Router>

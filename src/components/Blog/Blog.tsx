@@ -54,7 +54,7 @@ const Blog: React.FC = () => {
         const postComponents = [];
 
         for(let i = 0; i < posts.length; i++){
-            let component = <Post title={posts[i].title} body={posts[i].text} date={posts[i].date}/>
+            let component = <Post key={i} title={posts[i].title} body={posts[i].text} date={posts[i].date}/>
             postComponents.push(component);
         }
         
